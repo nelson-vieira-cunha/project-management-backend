@@ -15,10 +15,6 @@ public class AllocationController {
 
     private final AllocationService service;
 
-    public AllocationController(AllocationService service) {
-        this.service = service;
-
-    }
 
     @PostMapping
     public Allocation create(@RequestBody Allocation allocation) {

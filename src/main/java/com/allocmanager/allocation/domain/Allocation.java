@@ -19,7 +19,7 @@ public class Allocation {
     private Long id;
 
     public Long getDeveloperId() {
-        return developerId;
+        return id;
     }
 
     public void setDeveloperId(Long developerId) {

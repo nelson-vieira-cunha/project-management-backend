@@ -8,6 +8,7 @@ class AllocmanagerApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }
