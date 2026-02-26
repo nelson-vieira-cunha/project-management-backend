@@ -1,6 +1,5 @@
 package com.allocmanager.developer.domain;
 
-
 import jakarta.persistence.*;
 import java.time.LocalDate;
 
@@ -12,15 +11,59 @@ public class Developer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
     private String name;
 
-    @Column(unique = true, nullable = false)
     private String email;
 
     private String seniority;
 
     private LocalDate hireDate;
 
-    // getters e setters
+    // Construtor vazio (OBRIGATÓRIO para JPA e Jackson)
+    public Developer() {
+    }
+
+    // Getters
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getSeniority() {
+        return seniority;
+    }
+
+    public LocalDate getHireDate() {
+        return hireDate;
+    }
+
+    // Setters
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setSeniority(String seniority) {
+        this.seniority = seniority;
+    }
+
+    public void setHireDate(LocalDate hireDate) {
+        this.hireDate = hireDate;
+    }
 }
