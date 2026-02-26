@@ -15,18 +15,14 @@ public class Project {
 
     private String description;
 
+    private String developer;
+
+    private String status;
+
     private LocalDate startDate;
 
     private LocalDate endDate;
 
-    // Relacionamento opcional com Developer
-    @ManyToOne
-    @JoinColumn(name = "developer_id")
-    private com.allocmanager.developer.domain.Developer developer;
-
-    public Project() {}
-
-    // Getters e Setters
 
     public Long getId() { return id; }
 
@@ -35,6 +31,14 @@ public class Project {
     public String getName() { return name; }
 
     public void setName(String name) { this.name = name; }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     public String getDescription() { return description; }
 
@@ -48,9 +52,12 @@ public class Project {
 
     public void setEndDate(LocalDate endDate) { this.endDate = endDate; }
 
-    public com.allocmanager.developer.domain.Developer getDeveloper() { return developer; }
 
-    public void setDeveloper(com.allocmanager.developer.domain.Developer developer) {
+    public String getDeveloper() {
+        return developer;
+    }
+
+    public void setDeveloper(String developer) {
         this.developer = developer;
     }
 }
